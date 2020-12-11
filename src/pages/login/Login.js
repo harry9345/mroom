@@ -56,8 +56,24 @@ class Login extends Component {
                   <Button variant="primary" type="submit">
                     Submit
                   </Button>
+                  <div class="c-login-form__links">
+                    <a href="/recovery" class="c-text-link">
+                      <span>
+                        <span>
+                          <strong>Create</strong> or <strong>recover</strong> a
+                          password
+                        </span>
+                      </span>
+                    </a>
+                    <a href="/register" class="c-text-link">
+                      <span>
+                        <span>
+                          <strong>Register</strong> as a new customer
+                        </span>
+                      </span>
+                    </a>
+                  </div>
                 </Form>
-                <div>salam</div>
               </Col>
             </Row>
           </div>
