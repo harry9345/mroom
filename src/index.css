@@ -26,7 +26,10 @@ code {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #1a1a1c;
-    /* position: relative; */
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
     width: 600px;
     height: 100%;
     overflow: hidden;
