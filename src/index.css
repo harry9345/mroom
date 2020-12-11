@@ -17,14 +17,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-@media only screen and (max-width: 992px) {
-  :root {
-    width: 600px;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-  }
-}
 @media only screen and (min-width: 992px) {
   :root {
     width: 100%;
@@ -33,3 +25,11 @@ code {
     transform: translateX(-50%);
   }
 }
+/* @media only screen and (min-width: 992px) {
+  :root {
+    width: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+} */
