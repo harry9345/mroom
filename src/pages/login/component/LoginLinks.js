@@ -1,23 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Login.css";
 
 const LoginLinks = () => {
   return (
     <div className="login-link">
-      <a href="/recovery">
+      <Link to="/recovery">
         <span>
           <span>
             <strong>Create</strong> or <strong>recover</strong> a password
           </span>
         </span>
-      </a>
-      <a href="/register">
+      </Link>
+      <Link to="/register">
         <span>
           <span>
             <strong>Register</strong> as a new customer
           </span>
         </span>
-      </a>
+      </Link>
     </div>
   );
 };
