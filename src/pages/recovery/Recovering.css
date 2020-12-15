@@ -1,0 +1,138 @@
+.main-div-settings {
+  position: relative;
+  background-color: #000;
+  height: 100%;
+}
+.header-setting {
+  padding: 25px 30px 20px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.hedder-title {
+  margin-bottom: 3px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+.hedder-subtitle {
+  font-size: 15px;
+  margin-top: 20px;
+  line-height: 1.2;
+  width: 80%;
+}
+.content-setting {
+  border-top: 1px solid #282424;
+  padding: 30px 30px 20px;
+  max-width: 560px;
+  margin: 0 auto;
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.content-form {
+  margin: 0 auto;
+  max-width: 100%;
+}
+.recover-phone {
+  color: #838383;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.form-description {
+  font-size: 13px;
+  color: #dcdcdc;
+  margin-bottom: 15px;
+}
+.recover-password {
+  margin: 0 auto;
+  max-width: 100%;
+  color: #838383;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.recovery-description {
+  font-size: 13px;
+  color: #dcdcdc;
+  margin-bottom: 15px;
+}
+.code-field {
+  padding-top: 20px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.form-lable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  font-size: 12px;
+  color: #838383;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.form-input {
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  background: hsla(0, 0%, 100%, 0.12);
+  border-radius: 10px;
+  color: #838383;
+  width: 100%;
+  padding: 7px 10px;
+}
+.recovery-instructions {
+  font-size: 11px;
+  line-height: 1.2;
+  margin-top: 6px;
+  color: #fff;
+}
+.recovery-submit {
+  text-align: center;
+  margin-top: 35px;
+}
+.btn {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #c8922b;
+  cursor: pointer;
+  padding: 13px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 2px;
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  text-shadow: 0 1px 0 #543300;
+}
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  color: #fff;
+  background-color: #c8922b !important;
+  border-color: #c8922b !important;
+}
+.content-notification {
+  border-top: 1px solid #282424;
+  padding: 30px 30px 20px;
+  max-width: 560px;
+  margin: 0 auto;
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.notification-title {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.notification-description {
+  font-size: 13px;
+  color: #dcdcdc;
+  margin-bottom: 25px;
+}
+.c-btn--small {
+  padding: 10px 17px;
+  font-size: 15px;
+}
