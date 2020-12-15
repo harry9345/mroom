@@ -13,11 +13,9 @@ class LoginForm extends Component {
   getCountryCodeHandler = (event) => {
     this.setState({ countryCode: event.target.value });
   };
-  // handelFullPhone = () => {
-  //   this.setState({
-  //     fullPhone: this.state.countryCode + +this.state.phoneNumber,
-  //   });
-  // };
+  getPhoneNumber = (event) => {
+    this.setState({ phoneNumber: event.target.value });
+  };
   render() {
     return (
       <Row className="login-form">
@@ -32,7 +30,7 @@ class LoginForm extends Component {
                   </div>
                   <select
                     className="dropdown-select"
-                    onChange={this.getCountryCodeHandler}
+                    onChange={this.getCountryCodeHandler.bind(this)}
                   >
                     <option value="+358">Finland</option>
                     <option value="+46">Sweden</option>
@@ -49,6 +47,7 @@ class LoginForm extends Component {
                 className="form-control phone-code"
                 type="number"
                 placeholder="401234567"
+                onChange={this.getPhoneNumber.bind(this)}
               />
             </Form.Group>
             {/* <div onChange={this.handelFullPhone}>{this.state.fullPhone}</div> */}
@@ -58,7 +57,7 @@ class LoginForm extends Component {
               <Form.Control className="form-control" type="password" />
             </Form.Group>
             <div className="login-button">
-              <Button className="btn" type="submit">
+              <Button className="btn c-btn--small " type="submit">
                 Login
               </Button>
             </div>

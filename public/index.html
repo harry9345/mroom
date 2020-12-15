@@ -31,6 +31,7 @@
     <style>
       body {
         background-color: #000;
+        height: 100%;
         color: #fff;
       }
       .react-loading {
@@ -50,6 +51,14 @@
         border-left: 2px solid #fff;
         transform: translateZ(0);
         animation: reactLoadingSpin 0.75s infinite linear;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        /* overflow: hidden; */
+        background-color: #000;
+        color: #fff;
       }
       @keyframes reactLoadingSpin {
         0% {
