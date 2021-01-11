@@ -1,12 +1,15 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
+
 import "../Login.css";
 
 const Language = () => {
   return (
     <div xs={2} md={4} className="login-language">
-      <a href="/" className="language-link">
+      <Link to="/language" className="language-link">
         <span className="language-span">Language</span>English
-      </a>
+      </Link>
     </div>
   );
 };

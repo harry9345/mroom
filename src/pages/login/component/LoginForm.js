@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { Form, Row, Col, Button } from "react-bootstrap";
 
 import LoginLinks from "./LoginLinks";
-import { Form, Row, Col, Button } from "react-bootstrap";
 
 class LoginForm extends Component {
   state = {
@@ -20,7 +21,7 @@ class LoginForm extends Component {
     return (
       <Row className="login-form">
         <Col>
-          <Form method="post" className="form">
+          <Form className="form">
             <Form.Group className="login-form-field">
               <Form.Label className="form-lable">Phone Number</Form.Label>
               <div className="country-code">
@@ -58,7 +59,7 @@ class LoginForm extends Component {
             </Form.Group>
             <div className="login-button">
               <Button className="btn c-btn--small " type="submit">
-                Login
+                <Link to="/list">Login</Link>
               </Button>
             </div>
             <LoginLinks />

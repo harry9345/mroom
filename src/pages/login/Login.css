@@ -214,6 +214,5 @@
   font-size: 13px;
   color: #dcdcdc;
   transform: translateY(0);
-  transform: translateY(100%);
   transition: all 0.65s cubic-bezier(0.19, 1, 0.22, 1) 0.35s;
 }

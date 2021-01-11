@@ -15,8 +15,8 @@ class Login extends Component {
             <Language />
             <Logo />
             <LoginForm />
-            <Footer />
           </div>
+          <Footer />
         </div>
       </div>
     );

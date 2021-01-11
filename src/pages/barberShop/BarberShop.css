@@ -1,0 +1,439 @@
+.s-barbershop {
+  position: relative;
+  background-color: #000;
+  height: 100%;
+  text-align: left;
+  z-index: 2;
+}
+.s-barbershop__wrapper {
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.h-scrollable {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.barbershop__image {
+  height: 225px;
+  background-image: url("../../assets/barbershop1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform-origin: center top;
+  position: fixed;
+  background-position: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 185px;
+  z-index: 1;
+  opacity: 0.75;
+  transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@media screen and (min-height: 768px) {
+  .s-barbershop__header {
+    padding-top: 225px;
+  }
+}
+.s-barbershop__header {
+  position: relative;
+  padding-top: 185px;
+  z-index: 3;
+}
+.s-barbershop__header-notice {
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+  text-align: center;
+  transform: translate(-50%, 5px);
+  width: 180px;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+}
+.s-barbershop__header-notice p:after {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  margin-left: -5px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateY(10px);
+}
+.s-barbershop__message,
+.s-barbershop__timer {
+  position: absolute;
+  left: 50%;
+  bottom: -45px;
+  margin-left: -45px;
+  transform: scale(1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.c-timer--regular {
+  width: 90px;
+  height: 90px;
+  font-size: 32px;
+}
+.c-timer {
+  position: relative;
+  color: #1f1f20;
+  font-size: 32px;
+  line-height: 1;
+  z-index: 1;
+}
+.c-timer__wrapper {
+  background: linear-gradient(
+    0deg,
+    #d6d2d2,
+    hsla(0, 5%, 83%, 0.738) 19%,
+    hsla(0, 5%, 83%, 0.541) 34%,
+    hsla(0, 5%, 83%, 0.382) 47%,
+    hsla(0, 5%, 83%, 0.278) 56.5%,
+    hsla(0, 5%, 83%, 0.194) 65%,
+    hsla(0, 5%, 83%, 0.126) 73%,
+    hsla(0, 5%, 83%, 0.075) 80.2%,
+    hsla(0, 5%, 83%, 0.042) 86.1%,
+    hsla(0, 5%, 83%, 0.021) 91%,
+    hsla(0, 5%, 83%, 0.008) 95.2%,
+    hsla(0, 5%, 83%, 0.002) 98.2%,
+    hsla(0, 5%, 83%, 0)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transform: translateZ(0);
+}
+.c-timer--regular.c-timer--none .c-timer__wrapper {
+  box-shadow: inset 0 0 0 3px #d49f38;
+}
+.c-timer--string .c-timer__time {
+  font-size: 75%;
+  line-height: 1.1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.c-timer__time {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  color: #201f1f;
+}
+.c-timer__unit {
+  font-size: 10px;
+  position: relative;
+  color: #838383;
+  text-align: center;
+}
+.c-timer__glow,
+.c-timer__pulse {
+  display: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.s-barbershop__fixed-header {
+  position: fixed;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  height: 75px;
+  width: 100%;
+  z-index: 3;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 15px 45px 0 transparent;
+  transform: translateY(-100%);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.is-scrolled {
+  transform: translateY(0);
+  border-bottom: 1px solid #282424;
+  box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.75);
+}
+.s-barbershop__fixed-title {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 0 45px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+.s-barbershop__fixed-timer {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.c-timer--tiny {
+  width: 36px;
+  height: 36px;
+  font-size: 15px;
+}
+.s-barbershop__content {
+  position: relative;
+  z-index: 2;
+  background-color: #000;
+  padding-bottom: 70px;
+}
+.s-barbershop__details {
+  padding: 60px 30px 28px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.s-barbershop__title {
+  margin-bottom: 18px;
+  padding-right: 45px;
+  font-size: 26px;
+}
+
+.s-barbershop__details p {
+  font-size: 13px;
+  color: #dcdcdc;
+  margin-bottom: 15px;
+}
+.s-barbershop__notice {
+  padding: 0 30px 28px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.c-inline-notice {
+  position: relative;
+  border-radius: 5px;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  padding: 15px 20px;
+}
+.c-inline-notice h4 {
+  font-size: 13px;
+}
+.c-inline-notice p {
+  font-size: 13px;
+  margin-top: 7px;
+}
+.s-barbershop__favorite {
+  position: absolute;
+  top: 60px;
+  right: 25px;
+  z-index: 4;
+  text-align: right;
+}
+.c-favorite-toggle {
+  position: relative;
+  border: none;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background: none;
+}
+.c-favorite-toggle:before {
+  background-image: url("../../assets/heart.svg");
+  z-index: 1;
+  transition: all 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.c-favorite-toggle:after,
+.c-favorite-toggle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.s-barbershop__services {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.c-service {
+  padding: 20px 0;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.3);
+}
+.c-service__header {
+  padding: 0 30px;
+}
+.c-service__description,
+.c-service__title {
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.c-service__title {
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 20px;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+.c-service__description {
+  font-size: 13px;
+  line-height: 15px;
+  color: #dcdcdc;
+}
+.c-service__options {
+  margin: 0;
+  padding: 8px 0 0;
+  list-style-type: none;
+}
+.c-option {
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.c-option__wrapper {
+  position: relative;
+  padding: 12px 60px 12px 30px;
+}
+.c-option__title {
+  margin-bottom: 2px;
+}
+.c-option__wrapper h3 {
+  font-size: 15px;
+}
+.c-option__description {
+  color: #dcdcdc;
+  font-size: 13px;
+  font-weight: 400;
+}
+.c-option__unit {
+  font-weight: 700;
+  font-size: 13px;
+  padding-top: 2px;
+}
+.c-option__icon {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  background-image: url("../../assets/circle.svg");
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.s-barbershop__back {
+  position: absolute;
+  top: 37px;
+  left: 20px;
+  z-index: 4;
+}
+.c-back-button {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  margin-top: -7px;
+  margin-left: -7px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTNweCIgaGVpZ2h0PSIxM3B4IiB2aWV3Qm94PSIwIDAgMTMgMTMiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ5LjEgKDUxMTQ3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT4mbHQ7PC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IjEuNi1Mb2dpbi0tLUhlbHAtLS12MyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwLjAwMDAwMCwgLTQxLjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iJmx0OyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAuMDAwMDAwLCA0MS4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJEaXNjbG9zdXJlLUluZGljYXRvciIgZmlsbD0iI0ZGRkZGRiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNC4wMDAwMDAsIDYuNTAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC00LjAwMDAwMCwgLTYuNTAwMDAwKSAiIHBvaW50cz0iMCAxLjUgMS41IDAgOCA2LjUgMS41IDEzIDAgMTEuNSA1IDYuNSI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTIuNSw2LjUgTDExLjcxOTU0NDUsNi41IiBpZD0iTGluZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
+  background-size: 14px 14px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.s-barbershop__queue {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  transform: translate3d(0, 100%, 0);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 4;
+}
+@media screen and (min-height: 768px) {
+  .c-btn--queue {
+    text-align: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-height: 768px) {
+  .c-btn--queue:after {
+    margin-left: 15px;
+  }
+}
+.c-btn--queue:after {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 15px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAABGdBTUEAALGPC/xhBQAAAnpJREFUSA2tlctrE0Ecx7+b2Ww21rRajWJViIWW4uOkgtAeFEG9CAVB6EkPin9AKV48rAUV1Is3X4eeJODBHi2I2V4CCs1BmrZ5CIEefIBKzW6bpt2M89u6cZNsYvP4wTKzM/P7zG/m9xjAJZoGXyaTuZtOpyep75pqvqudhZyc//Qgm81y+qhPY82SGCmQ4pUnc/fVHaHbDkCW/SMD568F9y89j+k5lJzx/7U+OloO2Lny42tv9eJgV88EbdSMpWwwD3lNQjg+84qFdu0bOtR/fK8b7FfU4WYsZSf7wIoyQqUSjiwm3odlOXAwMnQq0CqUXb4F5JeB0obwKoeaTcaDsqyEBVRpBcp0HXw0gs1vDKuSBZMLyuf5eKBVqO1l8uLVfhS/Mxg+C0Y7UBtIR+sUtAzsFLQC2AloDbBdqI8AXqLp2DzG8IurWJQkiFjArD8Q/Om1lrIsJ7KNss7TQkeJHDUSxgbnWLs5+XrsxJlLw86c0354F12aengjKv6/rC/A3FY1mXjxcbyru3fMgTitPv0s/zb6KAXJGUHj8vS3Ct0TRWL8n8pWT59+as5EHyfEdSTEMVOKgpW+C7Bc7EoVp6RRxamcETG7BZsTyjEuIQYVC3TfdO+ewFZhtHENsB1YDbBdWAWwE7AysFMwAjZ8Uxp5k5S9pO6b0gqMNqjIlDcv76QK5u8DnHOfHbQi5KrjzMsq95hkP6M6ugsmjloc50S1Pk0LKANEM+sOWrdivb4dh+SUpIXdrIABCxikxSKd0paKjJMB9QDV4+XAJmhOlKBiET20iHIzAhiUTvS/XSmXLypVo9dR3LMMY30VxuGLKGhTEAY3J38Asuy0DFoGzLEAAAAASUVORK5CYII=);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.c-btn--queue {
+  background: linear-gradient(
+    -90deg,
+    #9f6c1f,
+    rgba(159, 108, 31, 0.738) 19%,
+    rgba(159, 108, 31, 0.541) 34%,
+    rgba(159, 108, 31, 0.382) 47%,
+    rgba(159, 108, 31, 0.278) 56.5%,
+    rgba(159, 108, 31, 0.194) 65%,
+    rgba(159, 108, 31, 0.126) 73%,
+    rgba(159, 108, 31, 0.075) 80.2%,
+    rgba(159, 108, 31, 0.042) 86.1%,
+    rgba(159, 108, 31, 0.021) 91%,
+    rgba(159, 108, 31, 0.008) 95.2%,
+    rgba(159, 108, 31, 0.002) 98.2%,
+    rgba(159, 108, 31, 0)
+  );
+  display: block;
+  height: 70px;
+  width: 100%;
+  font-size: 13px;
+  padding: 15px 30px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c8922b;
+  border-top: 1px solid #e5b42d;
+}
+.c-btn {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #c8922b;
+  cursor: pointer;
+  padding: 13px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 2px;
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  text-shadow: 0 1px 0 #543300;
+}

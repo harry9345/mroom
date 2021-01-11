@@ -6,7 +6,7 @@ const Arrow = () => {
   return (
     <div className="back-arrow-div">
       <div className="back-arrow">
-        <Link to="/login">recover password</Link>
+        <Link to="/login">Login</Link>
       </div>
     </div>
   );
