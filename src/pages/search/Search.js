@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import "./Search.css";
 import Footer from "../../components/Footer";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Search extends Component {
   render() {
@@ -10,12 +10,12 @@ class Search extends Component {
       <div>
         <div>search</div>
         <Footer />
-        <Link to="/barbershop1">
+        <NavLink to="/barbershop1">
           <button>barbershop1</button>
-        </Link>
-        <Link to="/barbershop2">
+        </NavLink>
+        <NavLink to="/barbershop2">
           <button>barbershop2</button>
-        </Link>
+        </NavLink>
       </div>
     );
   }

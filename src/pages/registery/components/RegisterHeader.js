@@ -1,6 +1,6 @@
 import React from "react";
 import "../Registering.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -17,9 +17,9 @@ const Header = () => {
             registering as a new customer.
           </p>
           <div className="notice-link">
-            <Link to="/recovery" className="link">
+            <NavLink to="/recovery" className="link">
               Create or recover password
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>

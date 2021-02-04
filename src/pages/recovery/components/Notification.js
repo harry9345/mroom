@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "../Recovering.css";
 
@@ -11,9 +11,9 @@ const Notification = () => {
         You can now use your chosen password next time you log in.
       </p>
       <p>
-        <Link to="/login" className="btn c-btn--small">
+        <NavLink to="/login" className="btn c-btn--small">
           Login
-        </Link>
+        </NavLink>
       </p>
     </div>
   );
